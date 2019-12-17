@@ -15,6 +15,9 @@ class CreateJenisPengeluaranTable extends Migration
     {
         Schema::create('jenis_pengeluaran', function (Blueprint $table) {
             $table->bigIncrements('id');
+		$table->string('jenis');
+		$table->string('kode');
+		$table->decimal('pajak',2,2);
             $table->timestamps();
         });
     }

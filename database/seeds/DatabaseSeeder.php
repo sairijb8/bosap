@@ -15,5 +15,8 @@ class DatabaseSeeder extends Seeder
 	$this->call([
         	UsersTableSeeder::class,
       	]);
+	factory(App\JenisPengeluaran::class,3)->create()->each(function ($jenis) {
+		factory(App\Bku::class,4)->create(['jenis_pengeluaran_id' => $jenis->id]);
+	});
     }
 }

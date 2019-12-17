@@ -15,6 +15,12 @@ class CreateBkuTable extends Migration
     {
         Schema::create('bku', function (Blueprint $table) {
             $table->bigIncrements('id');
+		$table->string('kode_bku');
+		$table->string('no_bukti');
+		$table->date('tanggal');
+		$table->text('uraian');
+		$table->integer('jumlah');
+		$table->unsignedBigInteger('jenis_pengeluaran_id');		
             $table->timestamps();
         });
     }
