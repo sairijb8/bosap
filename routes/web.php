@@ -19,3 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin/bku', 'BkuController@index')->name('bku');
+Route::resource('jenispengeluaran', 'JenisPengeluaranController');
